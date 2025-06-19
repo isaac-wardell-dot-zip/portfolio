@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<style>
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation</title>
+
+  <link rel="stylesheet" href="/assets/css/article.css">
+</head>
+
+<body>
+  <h2>Foundation</h2>
+  <br>
+  <div class="flex-links">
+    <div><a href="/index.html">Back to Home</a></div>
+    <div><a href="/portfolio_landing.html">Back to Projects</a></div>
+  </div>
+
+  <p>Foundation was a small 150x150mm 3D printer I designed over the course of a few months, building a version in early 2022 that served until 2024 when I built Unicross. The original design goal was to make something rapid, inexpensive, and highly modular. By standards at the time, it did well in these respects, but more expensive machines such as LH Stinger rapidly outclassed it.</p>
+
+  <img src="/assets/media/portfolio_images/foundation_base.jpg">
+  
+  <p>Inititally, the machine was a sick day project I designed with a cold. I knew I wanted something fast, and settled on a 150mm bed size and a volcano hotend. Not having much design perspective, and being barely versed in Onshape, I modeled much of the machine around my Ender 3. It had V-wheels on the Z axis, rods on the Y axis, and a rail on the X axis. The toolhead and bed were both self designed.</p>
+
+  <img src="/assets/media/portfolio_images/foundation_i.png">
+
+  <p>I used two Y axis motors to keep up with weight added to the bed, and two leadscrews for the Z axis. After some feedback online, I reworked the Z axis to use belts and redid the electronics mounting. The old system I had been using of placing a box under the base turned out to be hard to use on my Ender, so I scrapped it on Foundation.</p>
+
+  <img src="/assets/media/portfolio_images/foundation_bottom_mounting.png">
+
+  <p>This new system relied on the side mounting holes on the power supply. The PSU was suspended below the machine, with the electronics bolted to secondary plates on the bottom. This allowed for easy maintenance because I could then tilt the machine back and work on it from underneath.</p>
+
+  <p>Here is the final beta of the machine, designed with feedback from multiple online groups. The toolhead has been changed to be based on the open-source EVA design, with the fans at the back.</p>
+
+  <img src="/assets/media/portfolio_images/foundation_iii.png">
+
+  <p>The first release version of Foundation was not significantly different from the last beta. Aesthetic and structural changes were made to certain parts, and corner brackets were added to the insides of the base for even more stiffness. The toolhead part cooling was reworked to be on top of the machine, with a complex duct system for part cooling. Some bolt recesses were added as well.</p>
+
+  <img src="/assets/media/portfolio_images/foundation_yellow.jpg">
+
+  <p>The second release version is the version that I ended up building, though some parts that I installed were prototypes from other versions that ended up fitting with no issue. This version reworked each tensioner and moved the Y motors to the back of the machine for easier access to Y belt tensioning. A fan was added for the mainboard. Additionally, the part cooling fans were squeezed into place on the sides of the toolhead.</p>
+
+  <img src="/assets/media//portfolio_images/foundation_green.png">
+
+  <p>Assembly started some time between the first and second releases, so there is some mixing of parts. I used Polymaker Polylite ABS in white to print the frame. Putting together the machine was remarkably easy given my inexperience. 3D printing components and aluminum extrusion are both very easy to buy online, so I purchased each necessary component, starting with the frame and ending with the toolhead parts and electronics. The bed plates were cut by SendCutSend out of 5052 aluminum.</p>
+
+  <img src="/assets/media/portfolio_images/foundation_frame_mockup.jpg">
+  <br>
+  <img src="/assets/media/portfolio_images/foundation_partial_assem.jpg">
+  <br>
+  <img src="/assets/media/portfolio_images/foundation_toolhead.png">
+
+  <p>Some of the parts I used were salvaged from old Monoprice printers, including most of the linear rods and bearings and all of the stepper motors. During assembly, I made no attempt towards custom cables or wire management, opting to double up the wire at the base. It wound up being okay, but it did make servicing difficult.</p>
+
+  <img src="/assets/media/portfolio_images/foundation_initial_assem.jpg">
+  <br>
+  <img src="/assets/media/portfolio_images/foundation_rear_supports.JPG">
+
+  <p>I ended up splicing a cable to run both of the Y axis motors in parallel. When the machine was first powered on, I wrote a basic configuration file and did the necessary calibrations for sensorless homing and Z offset. Then, using nearly default SuperSlicer settings, I uploaded the first Gcode file. It had a significant defect that ended up stemming from a very loose X belt. Once I tightened it, the machine worked almost perfectly straight out of the gate.</p>
+
+  <img src="/assets/media/portfolio_images/foundation_printing.JPG">
+
+  <p>Over the life of the machine, I found it necessary to reinforce some parts structurally. I also added heatsinks to the X axis motor, as it ran very hot. I also attempted to add cables running from the top to the bottom of the machine to stiffen it, but lacking conventional tightening methods such as turnbuckles I never managed to achieve any notable extra stiffness.</p>
+
+  <p>Towards the end of the printer’s life, I decided to try running it with only one Y motor. I quickly discovered that my choice to run two motors in parallel was misguided, and that one motor given the same amount of power was vastly more efficient. I ended up modifying the machine to only use one motor. Another critical flaw I found was that the belt paths on the machine were not parallel, causing the printer to bind at high speeds due to twisting forces. However, by far its biggest problem was the extrusion capabilities. From the machine’s inception I had wanted to use a Bowden system instead of direct drive, but this crippled Foundation’s accuracy. Odd extrusion artifacts, usually unaffected by software compensation, haunted the machine from its construction to its death.</p>
+
+  <img src="/assets/media/portfolio_images/foundation_single_y.jpg">
+
+  <p>Overall, Foundation is nowhere close to my finest work, but it was a working 3D printer I designed as a freshman, and it served me more reliably than my Ender 3 for a longer period of time. Design-wise, it had critical flaws, but none of them prevented it from making serviceable parts. Before it was dismantled, it also printed every PETG component on Unicross, and every chassis version for Reflection I and II. Foundation was really a celebration of what we do as makers and the power at our fingertips. It was an invaluable tool and guide for my other projects, and an inspiration for many to make their own machines.</p>
+
+  <img src="/assets/media/portfolio_images/foundation_printing_reflection.jpg">
+
+  <div class="flex-links">
+    <div><a href="/index.html">Back to Home</a></div>
+    <div><a href="/portfolio_landing.html">Back to Projects</a></div>
+  </div>  
+</body>
+
+</html>

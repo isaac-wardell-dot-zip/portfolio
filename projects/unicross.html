@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<style>
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unicross</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="/assets/css/article.css">
+</head>
+
+<body>
+  <h2>Unicross</h2>
+  <br>
+  <div class="flex-links">
+    <div><a href="/index.html">Back to Home</a></div>
+    <div><a href="/portfolio_landing.html">Back to Projects</a></div>
+  </div>
+    
+  <p>Unicross is an ongoing attempt to make cross-gantry 3D printers more accessible to everyone. While traditional cross-gantry machines like the Annex K3 are costly, blazing-fast manufacturing powerhouses, Unicross is a small, simple, and low-cost machine designed to print many different material types while being about the same cost as a Prusa Mini or similar machine. Unlike the earlier Foundation project, I had a list of design requirements to follow this time.</p>
+
+  <div class="flex-container">
+  <ul>
+    <li>Simple</li>
+    <li>Good extrusion control, with direct drive and a small meltzone.</li>
+    <li>180mm printbed, using the (now discontinued) KP3S plate.</li>
+    <li>Able to make models out of any “normal” material.</li>
+    <li>Around $350 US in cost.</li>
+    <li>Reasonably fast.</li>
+    <li>NOT enclosable.</li>
+    <li>NOT ultra-fast.</li>
+    <li>NOT equipped with custom metal parts.</li>
+    <li>NOT compact.</li>
+  </ul>
+  </div>
+
+  <p>My initial concepts were based on a combination of the Bugbu project and the Rolohaun Defiant printer.</p>
+
+  <img src="/assets/media/portfolio_images/unicross_early_base.png">
+
+  <p>Something I didn’t realize while I was designing this machine was that basic cross-gantry printers are very, very space-inefficient. The initial designs for the printer used 250mm extrusions to form a rectangular prism. Later in the design, I had to increase this to 350mm to accommodate everything. This drastic increase in size will become apparent later in the images.</p>
+
+  <p>The first step was the X-Y motor mounts. The ones on Unicross are heavily influenced by the ones on Defiant, but stronger and with more material. The mounts come in two varieties, long and short, and are largely unchanged from the initial design now. Displayed is an early version of the short mount. After this, I pivoted to the Z axis and bed.</p>
+
+  <img src="/assets/media/portfolio_images/unicross_normal_mounting.png">
+
+  <p>Initially, I wanted to use a belt-driven triple leadscrew Z axis. I am still not entirely sure why I was so fixated on this, but I was, and continued this idea up until a fellow engineer pointed out that I could use two leadscrews and four rods to do the same thing. This method has worked well so far.</p>
+
+  <p>The early triple-leadscrew Z axis came in two design phases. This one is before I increased the frame size. While not pretty, it would have likely worked if put into action. As you can see, the top of the leadscrew was supported in this design, something I would later get rid of.</p>
+
+  <img src="/assets/media/portfolio_images/unicross_beta_cad.png">
+
+  <p>This second version came after I increased the frame size (and took a break to build the early rod blocks). I removed the supports for the leadscrews at the top, but the far rod support had to be split in order to accommodate it on a reasonable-sized print bed. </p>
+
+  <img src="/assets/media/portfolio_images/unicross_bolt_arms.png">
+
+  <p>Here is the final Z axis, pictured with the rest of the (incomplete) V1 CAD. I gave in and used two extra extrusion beams to support the top rods, though I still wonder if a multi-piece printed beam would work. The dual screws have so far done so well that the V2 CAD inherited similar (but not identical) design for the Z axis. One issue with this design is that the bed is not able to be leveled using the springs. Version 2 solved this issue.</p>
+
+  <img src="/assets/media/portfolio_images/unicross_current_cad.png">
+
+  <p>After designing the Z axis, I confronted the reality that I would have to design a toolhead. At least, I did eventually. It took me months of on-and-off thinking to come up with an idea, until I eventually made the decision to simply remix an existing head. The one I picked was from a user on a Discord server called Ice Cream Factory. Anyways, I remixed the head to use dual 4010 cooling fans and be equipped with a Sherpa Mini mounted how I wanted.</p>
+
+  <p>It might sound, then, like the remix process was simple. It was not. The first version of the remixed head was such a mess that the 4010 fans ended up glued on and the BLTouch had to be on spacers.</p>
+  
+  <p>I assembled the machine in a few days and it immediately printed at very high quality. After its construction I was able to print PLA, TPU, and PETG easily. It also did very well with ABS.</p>
+
+  <img src="/assets/media/portfolio_images/unicross_current.JPG">
+
+  <p>Version 1 was not perfect. The toolhead was the main issue but the belt paths on the X and Y axes were also misaligned. The bed could not be leveled properly. The X-Y gantry was almost impossible to assemble.</p>
+
+  <p>Version 2 had the following design requirements:</p>
+
+  <div>
+    <ul>
+      <li>Properly mounted toolhead cooling fans.</li>
+      <li>Easy-to-build X-Y gantry.</li>
+      <li>Reliable enough to have more completed prints than cancelled prints.</li>
+      <li>No blind joints.</li>
+    </ul>
+  </div>
+
+  <p>This is the redesign of the Z axis. It’s nearly identical but more rigid, and the bed is mounted on springs with leveling knobs.</p>
+
+  <img src="/assets/media/portfolio_images/unicross_2_z.png">
+  <br>
+  <img src="/assets/media/portfolio_images/unicross_2_z_assembly.jpg">
+  <br>
+  <img src="/assets/media/portfolio_images/unicross_2_z_belts.jpg">
+
+  <p>The new X-Y motor mounts included slots in the bottom, allowing the gantry to be partially assembled and then slid up into place.</p>
+
+  <img src="/assets/media/portfolio_images/unicross_2_motor_mount.png">
+
+  <p>This is what that looks like in practice. It’s not pretty but it worked very well.</p>
+
+  <img src="/assets/media/portfolio_images/unicross_2_gantry_install.jpg">
+
+  <p>Here is the new toolhead. It looks similar but it is slightly different. The 4010 blowers slide into place and connect to integrated ducts. Two screws retain them in place. There are many other modified aspects of the design, including modified screw clearances, but this is the main change.</p>
+
+  <img src="/assets/media/portfolio_images/unicross_2_head.png">
+
+  <p>The assembly for this version was, as expected, much easier. I finished full assembly of the machine in one day and was printing the day after. That night I ran a 4x4 Gridfinity baseplate, which used the entire build surface with no issue.</p>
+
+  <p>Later, however, after I started printing larger and taller pieces, I noticed odd clicking and squeaking sounds coming from the motion system. I also noticed extremely poor layer stacking on some parts.</p>
+
+  <img src="/assets/media/portfolio_images/unicross_2_layer_stacking.jpg">
+
+  <p>After almost two straight weeks of troubleshooting, I determined that all of the machine's rods were slightly randomly skewed. This was because the new rod mounting mechanism did not precisely constrain the rods, so each one had a slightly different offset. The clicking and squeaking sounds were parts of the motion system rubbing and sliding in ways and under forces they weren't supposed to handle. I needed to fix this immediately.</p>
+
+  <p>Version 3's top priority was, above all, to work. But I also wanted it to start moving towards a level of quality-of-life seen on more premium machines. The CAD was equipped with hidden electronics panels, a new method of rod mounting using thru-holes, and a parametric bed mount, among other quality of life features.</p>
+
+  <img src="/assets/media/portfolio_images/unicross_3_cad.png">
+
+  <p>As a small aside, I noticed during the CAD that the Kingroon KP3S was actually discontinued, so people replicating the project needed an alternative. As a result I quickly made a 200 watt bed PCB design in Kicad.</p>
+
+  <img src="/assets/media/portfolio_images/unicross_3_bed.png">
+
+  <p>Anyways, upon disassembling V2, this is what I found on the rods.</p>
+
+  <img src="/assets/media/portfolio_images/unicross_2_grooves.jpg">
+
+  <p>The sustained side forces on the motion system had caused some of the rods to develop grooves where the bearings had pushed into them over time.</p>
+
+  <img src="/assets/media/portfolio_images/unicross_3_thru_hole.jpg">
+
+  <p>This is the new method for installing rods, by sliding them through the mounts from the back. Full disclosure, I did not come up with this idea, I only implemented it.</p>
+
+  <p>In any case, Unicross 3 is currently in the assembly phase, and I am working through issues in the design as I go. All files are available <a href="https://github.com/IceChes/Unicross-3">here</a>.</p>
+
+  <div class="flex-links">
+    <div><a href="/index.html">Back to Home</a></div>
+    <div><a href="/portfolio_landing.html">Back to Projects</a></div>
+  </div> 
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<style>
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9">
+  <title>Reflection</title>
+
+  <link rel="stylesheet" href="/assets/css/article.css">
+</head>
+
+<body>
+  <h2>Reflection</h2>
+  <br>
+  <div class="flex-links">
+    <div><a href="/index.html">Back to Home</a></div>
+    <div><a href="/portfolio_landing.html">Back to Projects</a></div>
+  </div>
+
+  <p>Reflection is a full-combat antweight combat robot. It is the current culmination of several years of research into custom Arduino-based radio control systems for combat robots.</p>
+
+  <img src="/assets/media/portfolio_images/reflection_4.jpg">
+
+  <p>Current iterations of all of my combat robots, firmware, and other project assets are located in <a href="https://github.com/IceChes/ReprogramRobotics">this repository.</a> Information contained within this website may be outdated compared to the robots and designs in that repository.</p>
+
+  <p>My combat robotics journey started in 2020 when I was given an electronics kit to experiment with over the break. I set it aside for about a year, unable to run the required software, but eventually I picked it up again. I’m not sure how or why I got into combat robotics specifically, but I did.</p>
+
+  <p>My first prototype was a horizontal spinner robot with a large electronics bay and spinner. Because I was on a shoestring budget and had no knowledge of the craft, I used mostly spare components such as dissected drone batteries and CD drive motors to build the machine. The final version used a combination of standard remote control electronics, nRF24L01 radio components, and hobby robotics parts.</p>
+
+  <p>While I will not detail the challenges in getting the radio working, I will say it took several months and was very difficult. I then developed a basic firmware to control the bot.</p>
+
+  <p>After a few revisions, upgrading the robot to more legitimate components, I entered in a competition, naming the robot “Flash Memory”. This was before the plastic antweight category had become competitive, so my fights against other robots were eventful, interesting, and wildly destructive. The robot did adequately for its first event, and poorly for its second.</p>
+
+  <img src="/assets/media/portfolio_images/flash_memory_iso.jpg">
+
+  <p>But let’s skip forward in time to 2023, when I decided to enter the full combat class for the first time with refined and functioning electronics.</p>
+
+  <img src="/assets/media/portfolio_images/boing_front.JPG">
+
+  <p>This is Boing. It was a horizontal spinner designed in a very similar way to Flash Memory, using many of the same parts. I switched to conventional motors, however, and foam wheels. The disc and 6061 aluminum support rod were purchased from SendCutSend.</p>
+
+  <p>It was designed quickly and with little thought, mostly being a testbed for modernized firmware, compartmentalized internal design, and the full combat class. The chassis was made of ABS, with motors glued in place. A thin plastic lid encased the electronics and two thin plastic wheelguards encircled the tires. Though hypothetically rigid, these were able to pivot around their mounting bolts.</p>
+
+  <p>My fights were brief, I ended up going 2-2 again. Boing’s mechanical design was very simple, making it invulnerable against knocks and basic forms of damage. Its downfall was a strong uppercut from a vertical spinner which twisted the weapon mounting arm and damaged the frame and wheel guards.</p>
+
+  <p>The radio system worked well, with one major RFI disconnect during the right. I was able to resume the fight afterwards.</p>
+  
+  <p>Boing proved that I could build and control the radio system inside of a combat robot’s electronics stack. With this knowledge, I decided to branch out further, and create a vertical spinner robot using my own motor controller.</p>
+
+  <p>Reflection 1 never exited prototyping, but the nearly identical Reflection 2 was finished in February 2024.</p>
+
+  <img src="/assets/media/portfolio_images/reflection_v2.webp">
+
+  <p>As for its construction, the chassis was made of Duramic PLA. Two titanium plates shielded the front and a carbon fiber lid shielded the top. A two piece motor mounting system sandwiched Fingertech Spark motors between the lid and the chassis. This mounting system was a huge success, and I’m still using it today. The weapon system involved a metal weapon on a TPU hub, attached to a 2207 brushless motor, with a 105 flanged bearing on the other side. The entire stack was set up between two 7075 aluminum uprights, and a plastic upright was mounted there to keep the weapon from hitting the ground when the robot was inverted.</p>
+
+  <p>At competition, the robot was unable to drive correctly because of a contact patch problem. One wheel was always off the ground, and improper motor retention led to one of the motors slipping out of the chassis during the last fight. Additionally, a flaw in the braking system on the SDMD caused a dangerous interference issue that needed to be rectified before the robot could go in an arena again.</p>
+
+  <img src="/assets/media/portfolio_images/reflection_v2_damaged.jpg">
+
+  <p>I brought the robot home, disassembled it, kept the core components, and it sat for months. To continue, I needed to identify the issues with the older version. The new version would have a shorter chassis, with more room devoted to offense. The drive motors needed to be prioritized as well, so I designed the new bot to have wider tires. The weapon could be saved, but it needed to be mounted differently. I initially mounted it very far forwards, but last-minute moves to push the center of mass further towards the tires resulted in a moderate mounting position. The battery barely fit between the motors at the back – it had been in one of the side pods previously. I also changed over from spur gear motors to planetary gear motors for enhanced durability. My old spur motors were starting to sound like stripping and snapping.</p>
+
+  <img src="/assets/media/portfolio_images/reflection_hold.JPG">
+
+  <p>The final machine was entered in a small local event, sans carbon fiber lid, as it had not arrived yet. It had many issues, and ended up going 0-2, but it did drive correctly, and the weapon spun as it was designed to. The issues ended up being down to unreliable electronics and poor mechanical design. During one fight, the SDMD’s communication protocol broke down, and it was only able to drive backwards. During another fight, the skid keeping the weapon off the floor came off, causing the weapon to hit the ground and the robot to catastrophically explode.</p>
+
+  <img src="/assets/media/portfolio_images/reflection_3_exploded.jpg">
+
+  <p>Version 4 learned from these issues. It was printed from a TPU chassis ensuring it wouldn't expode, with parametrically-designed forks sitting flush to the ground. A steel plate sits on the other side of the weapon stack, stopping the bolts holding the weapon in from sinking into the TPU hub. New firmware on the SDMD, receiver, and transmitter ensures reliability and safety in all scenarios with software anti-lag and a failsafe which automatically throttles down the weapon. The design is awaiting entry in its next event.</p>
+
+  <img src="/assets/media/portfolio_images/reflection_4_cad.png">
+  <br>
+  <img src="/assets/media/portfolio_images/reflection_4_exploded.png">
+
+  <p>In the future, I would like to add an IMU for active gyroscopic precession mitigation and a few other smart features like a status LED and bidirectional radio. I am still unsure where or how to implement these features, but they will probably be bolted into the lid somewhere as additional electronics.</p>
+
+  <div class="flex-links">
+    <div><a href="/index.html">Back to Home</a></div>
+    <div><a href="/portfolio_landing.html">Back to Projects</a></div>
+  </div> 
+</body>
+
+</html>

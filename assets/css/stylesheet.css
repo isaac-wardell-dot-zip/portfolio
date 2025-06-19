@@ -1,0 +1,101 @@
+body {
+    background-color: rgb(115, 115, 115);
+    margin: 100px;
+}
+
+div,
+a,
+p,
+h1,
+h2,
+h3 {
+    font-family: raleway;
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+h1 {
+    font-size: 35pt;
+}
+
+h2 {
+    margin-bottom: 100px;
+    margin: 30px;
+}
+
+p,
+a {
+    font-size: 14pt;
+}
+
+@font-face {
+    font-family: raleway;
+    src: url(/assets/font/raleway.ttf);
+}
+
+.caption {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container div {
+    width: 20%;
+}
+
+.flex-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.flex-links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .flex-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .flex-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    body {
+        margin: auto;
+
+    }
+
+    .flex-container div {
+        width: 40%;
+    }
+
+    h2 {
+        margin-bottom: 0px;
+    }
+
+    p {
+        font-size: 12pt;
+    }
+
+}
