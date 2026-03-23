@@ -1,0 +1,128 @@
+@font-face {
+    font-family: raleway;
+    src: url(/assets/font/raleway.ttf);
+}
+
+body {
+    background-color: #737373;
+    max-width: 100%;
+    vertical-align: auto;
+    margin-top: 8vh;
+}
+
+
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+div,
+a,
+p,
+h1,
+h2,
+h3 {
+    font-family: raleway;
+    color: white;
+    margin: 10px;
+    word-break: normal;
+    white-space: normal;
+}
+
+p,
+a {
+    font-size: 14pt;
+}
+
+h1 {
+    font-size: 35pt;
+}
+
+h2 {
+    margin-bottom: 100px;
+    margin: 30px;
+}
+
+.caption {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container div {
+    width: 40%;
+}
+
+.flex-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.flex-links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0%;
+}
+
+.project-text {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 25%; 
+    /*you should hate this too*/
+    text-align: left;
+}
+
+@media (max-width: 800px) {
+    .flex-container {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .flex-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .flex-container div {
+        width: 60%;
+    }
+
+    h2 {
+        margin-bottom: 0px;
+    }
+
+    p,
+    a {
+        font-size: 12pt;
+    }
+
+    .project-text {
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+    }
+}
